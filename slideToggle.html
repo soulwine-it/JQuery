@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <title>slide Toggle</title>
+    <script>
+      $(document).ready(function() {
+        $("button").click(function() {
+          $("p").slideToggle();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p>This is a paragraph.</p>
+    <button>Toggle between slide up and slide down for a p element</button>
+  </body>
+</html>
