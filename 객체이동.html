@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $("img").css("height", 250);
+        // 2초에 한번씩 사진 바뀜
+        setInterval(function() {
+          // 1번 이미지를 body에 붙이면서 맨 뒤로 보냄
+          $("img")
+            .first()
+            .appendTo("body");
+        }, 2000);
+      });
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <img src="/images/1.png" />
+    <img src="/images/2.png" />
+    <img src="/images/3.png" />
+    <img src="/images/4.png" />
+    <img src="/images/5.png" />
+  </body>
+</html>
