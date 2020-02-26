@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      //(a).appendTo(b) b에 a를 추가
+      function appendTest() {
+        alert(1);
+        $("#test1").append("<p>결과</p>");
+      }
+
+      //(a).append(b) a에 b를 추가
+      function appendToTest() {
+        alert(2);
+        $("<p>결과2</p>").appendTo("#test2");
+      }
+
+      //(a).prepend(b) b를 a의 앞에 추가
+      function prependTest() {
+        alert(3);
+        $("#test3").prepend("<p>결과3</p>");
+      }
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="appendTest()">append</button>
+    <div id="test1">test</div>
+
+    <button onclick="appendToTest()">appendTo</button>
+    <div id="test2">test2</div>
+
+    <button onclick="prependTest()">prepend</button>
+    <div id="test3">test3</div>
+  </body>
+</html>
