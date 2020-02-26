@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      //value값 가져오기
+      function fnValuesel() {
+        alert($("#PrettyGirls").val());
+      }
+      //text값 가져오기
+      function fnTextValalert() {
+        alert($("#PrettyGirls option:selected").text());
+      }
+      //인덱스값 가져오기
+      function idxValueGo() {
+        alert(
+          $("#PrettyGirls option").index($("#PrettyGirls option:selected"))
+        );
+      }
+
+      //value값으로 세렉트 시키는 방법 2가지
+      function fnSelectedCombo() {
+        var slcNumOp = $("#slcNum option:selected").val();
+        console.log(slcNumOp);
+        // var slcNumOpval = $("#slcNum option:selected").val();
+      }
+
+      function fnRemoveCombo() {
+        var slcNumOp = $("#slcNum option:checked").val() - 1;
+        console.log(slcNumOp);
+        $("#slcNum option:eq('" + slcNumOp + "')").remove();
+      }
+
+      function fnAppendCombo() {
+        var addSlcNum = $("#PrettyGirls option").size() + 1;
+        $("#PrettyGirls").append(
+          "<option value='" + addSlcNum + "'>연예인</option>"
+        );
+      }
+
+      function fnReplaceCombo() {
+        var slcNumOp = $("#slcNum option:selected").val() - 1;
+        $("#PrettyGirls option:eq('" + slcNumOp + "')").replaceWith(
+          "<option value='" +
+            $("#slcNum option:selected").text() +
+            "'>한효주</option>"
+        );
+      }
+    </script>
+    <title>selectBox 유효성 검사</title>
+  </head>
+  <body>
+    <select id="PrettyGirls">
+      <option value="numOne">신민아</option>
+      <option value="numTwo">전지현</option>
+      <option value="numThree">원빈</option>
+      <option value="numFour">이나영</option>
+      <option value="numFive">장동건</option>
+      <option value="numSix">고소영</option>
+    </select>
+
+    <input type="button" value="value값" onclick="fnValuesel();" />
+    <input type="button" value="text값" onclick="fnTextValalert();" />
+    <input type="button" value="index값" onclick="idxValueGo();" />
+
+    <select id="slcNum">
+      <option value="1">num1</option>
+      <option value="2">num2</option>
+      <option value="3">num3</option>
+      <option value="4">num4</option>
+      <option value="5">num5</option>
+      <option value="6">num6</option>
+      <option value="7">num7</option>
+    </select>
+
+    <input type="button" value="선택" onclick="fnSelectedCombo();" />
+    <input type="button" value="제거" onclick="fnRemoveCombo();" />
+    <input type="button" value="추가" onclick="fnAppendCombo();" />
+    <input type="button" value="교체" onclick="fnReplaceCombo();" />
+  </body>
+</html>
