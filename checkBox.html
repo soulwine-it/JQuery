@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="text/javascript"
+      src="http://code.jquery.com/jquery-latest.min.js"
+    ></script>
+    <title>checkBox</title>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("#regBtn").click(function() {
+          invalidItem();
+        });
+        $(":reset").click(function() {
+          $("#userId").focus();
+        });
+
+        //입력 유효성 검사
+        function invalidItem() {
+          var cnt = $("input[name=hobby]:checkbox:checked").length;
+          //몇개 선택되어있는지 개발자 모드에서 확인해보세요.
+          console.log(cnt);
+          if (cnt < 1) {
+            alert("한 개 이상을 선택하셔야 합니다.");
+          } else {
+            alert(cnt + "개가 선택되었습니다.");
+          }
+        }
+        //전체 선택 해제
+        $("input[name=all]").click(function() {
+          var chk = $(this).is(":checked");
+          console.log(chk);
+          if (chk) {
+            $("input[name=hobby]").attr("checked", true);
+          } else {
+            $("input[name=hobby]").attr("checked", false);
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <form>
+      <input type="checkbox" name="all" value="all" /> 전체
+      <input type="checkbox" name="hobby" value="computer" /> 컴퓨터
+      <input type="checkbox" name="hobby" value="TV" /> TV시청
+      <input type="checkbox" name="hobby" value="read" /> 독서
+      <input type="checkbox" name="hobby" value="game" /> 게임
+    </form>
+
+    <input type="submit" id="regBtn" value="회원가입" />
+    <input type="reset" value="취소" />
+  </body>
+</html>
