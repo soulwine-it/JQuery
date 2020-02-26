@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <title>Document</title>
+    <script>
+      $(document).ready(function() {
+        $("button[id=attr]").click(function() {
+          $("img").attr("width", "500");
+        });
+        $("button[id=remove").click(function() {
+          $("img").removeAttr("width");
+        });
+        $("button[id=attR").click(function() {
+          $("img").attr("width", "300");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <img src="images/1.png" alt="sql" width="300" height="300" /><br />
+
+    <button id="attr">속성 변경</button>
+    <button id="remove">속성 제거</button>
+    <button id="attR">속성 복귀</button>
+  </body>
+</html>
