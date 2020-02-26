@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $("#regBtn").click(function() {
+          invalidItem();
+        });
+        function invalidItem() {
+          if ($("input[name=gender]:radio:checked").length < 1) {
+            alert("성별을 선택하세요");
+            return false;
+          } else {
+            alert("회원가입을 축하합니다.");
+          }
+        }
+      });
+    </script>
+    <title>radio box 유효성 검사</title>
+  </head>
+  <body>
+    <form>
+      <input type="radio" name="gender" value="man" />남성
+      <input type="radio" name="gender" value="woman" />여성
+
+      <input type="button" id="regBtn" value="회원가입" />
+      <input type="reset" value="취소" />
+    </form>
+  </body>
+</html>
