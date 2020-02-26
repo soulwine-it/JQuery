@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $("#addClassBtn").click(function() {
+          $("#target").addClass("testClass");
+        });
+        $("#hasClassBtn").click(function() {
+          if ($("#target").hasClass("testClass") == true) {
+            alert("textClass있네요?");
+          } else if ($("#target").hasClass("testClass") == false) {
+            alert("textClass가 없네요?");
+          }
+        });
+        $("#removeClassBtn").click(function() {
+          $("#target").removeClass("testClass");
+        });
+
+        $("#toggleClassBtn").click(function() {
+          $("#target").toggleClass("testClass");
+        });
+      });
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Target</legend>
+      <div id="target">타겟 영역입니다.</div>
+    </fieldset>
+    <input type="button" id="addClassBtn" value="addClass" />
+    <input type="button" id="hasClassBtn" value="hasClass" />
+    <input type="button" id="removeClassBtn" value="removeClass" />
+    <input type="button" id="toggleClassBtn" value="toggleClass" />
+  </body>
+</html>
