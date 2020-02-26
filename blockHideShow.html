@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $("button[id=show]").click(function() {
+          $("img").show();
+        });
+        $("#hide").click(function() {
+          $("img").hide();
+        });
+      });
+    </script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <img src="images/1.png" />
+    <br />
+    <button id="show">Show</button>
+    <button id="hide">hide</button>
+  </body>
+</html>
