@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <title>class controller</title>
+    <script>
+      //   $(document).ready(function{
+      //       $("#Add").click(function(){
+      //           $("p").addClass("intro");
+      //       });
+      //   });
+
+      $(document).ready(function() {
+        $("button[id=Add]").click(function() {
+          $("p:first").addClass("intro");
+        });
+        $("button[id=Remove]").click(function() {
+          $("p:first").removeClass("intro");
+        });
+        $("button[id=Has]").click(function() {
+          alert($("p").hasClass("intro"));
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p>this is a heading</p>
+    <h1>this is a paragraph.</h1>
+    <h1>this is another paragraph</h1>
+
+    <button id="Add">add class</button>
+    <button id="Remove">removeClass</button>
+    <button id="Has">hasClass</button>
+  </body>
+</html>
