@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        var object = { name: "윤민성" };
+
+        //객체에 속성추가
+        $.extend(object, {
+          region: "서울특별시 도봉구",
+          part: " bass guitar"
+        });
+        var output = "";
+        //$.each 메소드로 출력해봄
+        $.each(object, function(key, data) {
+          output += key + ":" + data + "\n";
+        });
+        alert(output);
+      });
+    </script>
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
