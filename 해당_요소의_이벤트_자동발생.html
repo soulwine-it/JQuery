@@ -1,35 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style>
-      button {
-        margin: 10px;
-      }
-      div {
-        color: blue;
-        font-weight: bold;
-      }
-      span {
-        color: red;
-      }
-    </style>
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
   </head>
   <body>
-    <button>Button #1</button> <button>Button #2</button>
+    <button>버튼1</button>
+    <button>버튼 2</button>
+
     <div><span>0</span> button #1 clicks.</div>
     <div><span>0</span> button #2 clicks.</div>
+
     <script>
       $("button:first").click(function() {
-        update($("span:first"));
+        add($("span:first"));
       });
       $("button:last").click(function() {
         $("button:first").trigger("click");
-        update($("span:last"));
+        add($("span:last"));
       });
-      function update(j) {
-        var n = parseInt(j.text(), 10);
-        j.text(n + 1);
+
+      function add(plus) {
+        var n = parseInt(plus.text(), 10);
+        plus.text(n + 1);
       }
     </script>
   </body>

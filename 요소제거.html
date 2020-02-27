@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        // .detach() 지정한 요소를 포함한 하위 요소 모두 제거
+        $("#detachBtn").click(function() {
+          $("#target").detach();
+        });
+        // .empty 지정한 요소의 하위 요소를 제거
+        $("#emptyBtn").click(function() {
+          $("#target").empty();
+        });
+        //remove 지정한 요소를 포함 하위 요소 모두 제거, 요소와 관련된 이벤트와 데이터 모두 제거
+        $("#removeBtn").click(function() {
+          $("#target").remove();
+        });
+      });
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <fieldset style="height:150px; position:relative;">
+      <legend>Target</legend>
+      <div
+        id="target"
+        style="background-color:gray; height:80px; width:80%; position:relative; left:10%; top:10px"
+      >
+        <div
+          id="innerTarget"
+          style="background-color:green; height:50px; width:50%; position:absolute; left:25%; top:20%;"
+        ></div>
+      </div>
+    </fieldset>
+    <input type="button" id="detachBtn" value="detach" />
+    <input type="button" id="emptyBtn" value="empty" />
+    <input type="button" id="removeBtn" value="remove" />
+  </body>
+</html>
