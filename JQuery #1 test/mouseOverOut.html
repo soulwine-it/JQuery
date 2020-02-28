@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      // 자신의 영역까지 들어가 감지
+      //mouseover
+      // $(selector).mouseover()
+      // $(selector).mouseover(function)
+      // mouseout
+      // $(selector).mouseout()
+      // $(selector).mouseout(function)
+      // 자신의 영역을 감지하지 않음
+      // mouseenter
+      // $(selector).mouseenter()
+      // $(selector).mouseenter(function)
+      // mouseleave
+      // $(selector).mouseleave()
+      // $(selector).mouseleave()
+
+      $(document).ready(function() {
+        $("#mouse1").mouseover(function() {
+          $("#mouse1").css("background-color", "yellow");
+        });
+        $("#mouse1").mouseout(function() {
+          $("#mouse1").css("background-color", "pink");
+        });
+        $("#mouse2").mouseenter(function() {
+          $("#mouse2").css("background-color", "yellow");
+        });
+        $("#mouse2").mouseleave(function() {
+          $("#mouse2").css("background-color", "pink");
+        });
+      });
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="mouse1">mouseover and mouseout</p>
+    <br />
+    <p id="mouse2">mouseenter and mouseleave</p>
+  </body>
+</html>
