@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $("#insertBefore").click(function() {
+          $("<span>Hello Insert Before</span>").insertBefore("p");
+        });
+        $("#insertAfter").click(function() {
+          $("<span>Hello After Before</span>").insertAfter("p");
+        });
+      });
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph</p>
+    <button id="insertBefore">insertBefore</button>
+    <button id="insertAfter">insertAfter</button>
+  </body>
+</html>
