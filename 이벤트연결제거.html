@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      //off는 unbind랑 비슷한듯?
+      $(document).ready(function() {
+        $("p").on("click", function() {
+          $(this).css("background-color", "red");
+        });
+        $("button").click(function() {
+          $("p").off("click");
+        });
+      });
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Click this paragraph to change its background color</p>
+    <p>
+      Click the button below and then click on this paragraph.(the click event
+      is removed)
+    </p>
+    <br />
+    <button>이벤트제거(off)</button>
+  </body>
+</html>
