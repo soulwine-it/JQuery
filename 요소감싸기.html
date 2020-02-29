@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $("#wrap").click(function() {
+          $("p").wrap("<div></div>");
+        });
+        $("#unwrap").click(function() {
+          $("p").unwrap("<div></div>");
+        });
+        $("#wrapAll").click(function() {
+          $("p").wrapAll("<div></div>");
+        });
+        $("#wrapInner").click(function() {
+          $("p").wrapInner("<div></div>");
+        });
+      });
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+
+    <button id="wrap">Wrap</button>
+    <button id="unwrap">unwrap</button>
+    <button id="wrapAll">wrapALL</button>
+    <button id="wrapInner">wrapInner</button>
+  </body>
+</html>
