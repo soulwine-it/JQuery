@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $("#after").click(function() {
+          $("p").after("<p>Hello world!</p>");
+        });
+        $("#before").click(function() {
+          $("p").before("<p>Hello world!</p>");
+        });
+      });
+    </script>
+    <title>After, Before</title>
+  </head>
+  <body>
+    <button id="after">after</button>
+    <button id="before">before</button>
+
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+  </body>
+</html>
