@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      // is :
+      //$(selector).is(selectorElement, function(index, element))
+      $(document).ready(function() {
+        $("h1").each(function() {
+          if ($(this).is(".header")) {
+            $(this).css("color", "blue");
+          }
+        });
+      });
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 class="header">너를 향한</h1>
+    <h1>나의 마음은</h1>
+    <h1 class="header">Blue</h1>
+  </body>
+</html>

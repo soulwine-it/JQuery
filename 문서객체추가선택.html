@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='http://code.jquery.com/jquery-latest.min.js'></script>
+    <script>
+        // add : 기존 그룹에 엘리멘트 추가
+        //$(selector).add(element, context)
+        $(document).ready(function(){
+            $('h1').css('color', 'red').add('h2').css('float', 'left');
+        });
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>오늘 하루는</h1>
+    <h2>뭘 할까 하다가</h1>
+    <h1>jquery를 공부좀 해봤어</h1>
+    <h2>이거하고 음..스프링 공부좀할까?</h1>
+    <h1>너의 생각은 어떠니?</h1>
+</body>
+</html>

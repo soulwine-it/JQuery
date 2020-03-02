@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      // eq : $(selector).eq(index)
+      // first : $(selector).first()
+      // last : $(selector).last()
+      $(document).ready(function() {
+        $("p")
+          .eq(2)
+          .css("background-color", "red");
+        $("p")
+          .first()
+          .css("background-color", "blue");
+        $("p")
+          .last()
+          .css("background-color", "gray");
+      });
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>안녕..개발자는 참 힘든거 같아..</h1>
+    <p>할게 너무 많거든..</p>
+    <p>그런데 재미는 있다</p>
+    <p>하지만 재미로만 살 수 없거든..가족도 있구..</p>
+    <p>도전하고자 하는 사람 도전해!</p>
+  </body>
+</html>
