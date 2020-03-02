@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      //특정 조건에 맞는 요소를 반환
+      //$(selector).filter(criteria, function(index))
+      //$('p').filter('.intro').css('background-color','yellow')
+      $(document).ready(function() {
+        $("p")
+          .filter(".intro")
+          .css("background-color", "red");
+      });
+    </script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Welcome to My hompage</h1>
+    <p>My name is nike</p>
+    <p class="intro">I live in seoul</p>
+    <p class="intro">I love my wife</p>
+    <p>My best friend is Mickey.</p>
+  </body>
+</html>
