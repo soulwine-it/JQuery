@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      // clone
+      //자식노드, 텍스트 및 속성을 포함한 선택한 요소를 복사
+      // $(selector).clone(true | false)
+      $(document).ready(function() {
+        $("button").click(function() {
+          $("p")
+            .clone()
+            .appendTo("body");
+        });
+      });
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <p>오늘은 회사가니까</p>
+    <p>화면 그려오라고 하시더라..</p>
+    <p>그런데 제이쿼리 하고있음.. 이거 하고 해야지</p>
+
+    <button>Clone all a elements, and append them to the body element</button>
+  </body>
+</html>

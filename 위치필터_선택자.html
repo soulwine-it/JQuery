@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      //odd : 홀수 인덱스 선택
+      // $('tr:odd').css('background-color', 'yellow')
+      //even : 짝수 인덱스 선택
+      // $('tr:even').css('background-color', 'blue')
+      $(document).ready(function() {
+        $("tr:odd").css("background-color", "yellow");
+        $("tr:even").css("background-color", "blue");
+      });
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>welcome.</h1>
+    <table border="3">
+      <tr>
+        <td>love</td>
+        <td>man</td>
+      </tr>
+      <tr>
+        <td>love</td>
+        <td>girl</td>
+      </tr>
+      <tr>
+        <td>love</td>
+        <td>child</td>
+      </tr>
+      <tr>
+        <td>love</td>
+        <td>world</td>
+      </tr>
+      <tr>
+        <td>love</td>
+        <td>you</td>
+      </tr>
+      <tr>
+        <td>love</td>
+        <td>me</td>
+      </tr>
+    </table>
+  </body>
+</html>

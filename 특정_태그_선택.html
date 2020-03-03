@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      //find : $(selector).find(filter)
+      // 일반 선택자로 선택 및 XML 문서에서 데이터 추출 시 사용
+      var xml = "";
+      xml += "<phones>";
+      xml += "<phone>";
+      xml += "<name>갤럭시노트10</name>";
+      xml += "<manufacturer>SAMSUNG</manufacturer>";
+      xml += "</phone>";
+      xml += "<phone>";
+      xml += "<name>G6</name>";
+      xml += "<manufacturer>LG</manufacturer>";
+      xml += "</phone>";
+      xml += "<phone>";
+      xml += "<name>아이폰 10</name>";
+      xml += "<manufacturer>APPLE</manufacturer>";
+      xml += "</phone>";
+      xml += "</phones>";
+
+      $(document).ready(function() {
+        xmlDOC = $.parseXML(xml);
+
+        console.log(xmlDOC);
+        $(xmlDOC)
+          .find("phone")
+          .each(function(index) {
+            var output = "";
+
+            output += "<div>";
+            output +=
+              "<h1>" +
+              $(this)
+                .find("name")
+                .text() +
+              "</h1>";
+            output +=
+              "<p>" +
+              $(this)
+                .find("manufacturer")
+                .text() +
+              "</p>";
+            output += "</div>";
+
+            document.body.innerHTML += output;
+          });
+      });
+    </script>
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>

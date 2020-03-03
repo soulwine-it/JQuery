@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      //removeAttr
+      // 선택된 엘리먼트(요소)에서 하나 이상의 속성을 제거
+      // $(selector).removeAttr(attribute)
+      // $('p').removeAttr('style');
+      $(document).ready(function() {
+        $("button").click(function() {
+          $("p").removeAttr("style");
+        });
+      });
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <p style="font-size:120%; color:red">This is a paragraph.</p>
+    <p style="font-weight:bold; color:blue">This is another paragraph.</p>
+
+    <button>Remove the style attribute from all p elements</button>
+  </body>
+</html>

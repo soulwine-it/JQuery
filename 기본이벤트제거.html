@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      //event.preventDefault
+      // 현재 이벤트의 기본 동작을 중단
+      // $(selector).click(function(event){event.preventDefault();});
+      $(document).ready(function() {
+        $("#naver").click(function(event) {
+          event.preventDefault();
+        });
+      });
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <a id="naver" href="http://www.naver.com">네이버</a>
+    <a id="daum" href="http://www.daum.net">다음</a>
+  </body>
+</html>
