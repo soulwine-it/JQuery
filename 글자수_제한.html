@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $("textarea").keyup(function() {
+          var inputLength = $(this).val().length;
+          if (inputLength > 150) alert("더이상 입력할 수 없습니다.");
+          var remain = 150 - inputLength;
+          $("h1").html(remain);
+        });
+      });
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <p>글자수 제한 150</p>
+      <h1>150</h1>
+      <textarea cols="70" rows="5"></textarea>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      //change - 상태변경 등의 이벤트가 발생하였을 경우 사용
+      // $(selector).change(function), $(selector).change()
+      $(document).ready(function() {
+        $("#select1").change(function() {
+          var x = $("#select1 option:selected").text();
+          $("div").text(x);
+        });
+      });
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <select id="select1" size="6">
+      <option value="1">강아지</option>
+      <option value="2">고양이</option>
+      <option value="3">말</option>
+      <option value="4">소</option>
+      <option value="5">양</option>
+      <option value="6">개구리</option>
+      <option value="7">도마뱀</option>
+    </select>
+    <br /><br />
+    <div>선택 표시</div>
+  </body>
+</html>
