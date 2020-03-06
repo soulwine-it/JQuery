@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        //자식 레벨에서만 찾아서 선택
+        // $("ul")
+        //   .children()
+        //   .css({ color: "red", border: "2px solid red" });
+        //노드의 부모를 선택
+        // $("ul")
+        //   .parent()
+        //   .css({ color: "blue", border: "2px solid red" });
+        // //노드의 모든 부모 선택
+        // $("ul")
+        //   .parents()
+        //   .css({ color: "gray", border: "2px solid red" });
+        // //태그의 형제 노드를 선택
+        $("ul")
+          .siblings()
+          .css({ color: "green", border: "2px solid red" });
+      });
+    </script>
+    <title>Document</title>
+  </head>
+  <body class="descendants">
+    body(great-grndparent)
+    <div style="width:500px;">
+      div(grandparent)
+      <ul>
+        ul (direct parent)
+        <li>
+          li(child)
+          <span>span (grandchild)</span>
+        </li>
+      </ul>
+      <ul>
+        <li>another ul-li</li>
+      </ul>
+    </div>
+  </body>
+</html>

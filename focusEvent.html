@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      //focusin: 초점이 맞추어지기 전
+      //(selector).focusin(function)
+      //focusout: 초점이 사라지기 전
+      //(selector).focusout(function)
+      //focus : 초점을 맞추어 질 때
+      //(selector).focus(function)
+      //blur : 초점이 사라질 때
+      //(selector).blur(function)
+      $(document).ready(function() {
+        $("div").focusin(function() {
+          $(this).css("background-color", "yellow");
+        });
+        $("div").focusout(function() {
+          $(this).css("background", "red");
+        });
+        $("#focus").on("focus", function() {
+          $("#focus").css({
+            background: "blue",
+            color: "white",
+            border: "1px solid violet"
+          });
+        });
+        $("#blur").on("blur", function() {
+          $("#blur").css({
+            background: "red",
+            color: "white",
+            border: "1px solid red"
+          });
+          alert("text4:blur");
+        });
+      });
+    </script>
+    <title>Focus</title>
+  </head>
+  <body>
+    <div style="border: 1px solid black; padding: 10px;">
+      First name: <input type="text" /> Last name: <input type="text" />
+    </div>
+    focus:<input id="focus" type="text" /> <br />
+    blur:<input id="blur" type="text" />
+    <p>
+      Click an input field to get focus. Click outside an input field to lose
+      focus.
+    </p>
+  </body>
+</html>

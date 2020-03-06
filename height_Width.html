@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      //브라우저의 크기
+      //   $(document).ready(function() {
+      //     $("button").click(function() {
+      //       var wh = $(window).height();
+      //       var ww = $(window).width();
+      //       alert("높이" + wh + "넓이" + ww);
+      //     });
+      //   });
+      //div의 크기
+      $(document).ready(function() {
+        $("button").click(function() {
+          var wh = $("div").height();
+          var ww = $("div").width();
+          alert("높이" + wh + "넓이" + ww);
+        });
+      });
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      style="height: 100px; width:300px; padding: 10px; margin:3px; border:1px solid blue; background-color:lightblue;"
+    ></div>
+    <br />
+
+    <button>Display the width of div</button>
+  </body>
+</html>

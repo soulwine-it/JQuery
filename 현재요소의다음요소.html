@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $("li:eq(0)")
+          .next()
+          .text("next 활용")
+          .css("background", "red");
+        $("li:eq(2)")
+          .nextAll()
+          .text("nextAll활용")
+          .css("background", "blue");
+      });
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li>원숭이</li>
+      <li>호랑이</li>
+      <li>낙타</li>
+      <li>박쥐</li>
+      <li>쥐며느리</li>
+      <li>리어카</li>
+    </ul>
+  </body>
+</html>

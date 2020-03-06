@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $("#total").click(function() {
+          if ($("#total").prop("checked")) {
+            $("input[type=checkbox]").prop("checked", true);
+          } else {
+            $("input[type=checkbox]").prop("checked", false);
+          }
+        });
+      });
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th class="boardChk"><input type="checkbox" id="total" />전체</th>
+      </tr>
+      <tr>
+        <td><input type="checkbox" id="test[]" />테스트1</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" id="test[]" />테스트2</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" id="test[]" />테스트3</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" id="test[]" />테스트4</td>
+      </tr>
+    </table>
+  </body>
+</html>
